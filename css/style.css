@@ -1,0 +1,375 @@
+* {
+  box-sizing: border-box;
+}
+
+:root{
+--color_1: #E5B80B;
+--color_2: #84a98c;
+--color_3: #f2f1ec;
+--color_4: rgb(31,52,20);
+}
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+  background-color: var(--color_3);
+ 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+
+/* images */
+
+
+
+
+/* Header part */
+header {
+  width: 100%;
+  display: flex;
+  height: 150px;
+  color: var(--color_4);
+  padding: 1rem;
+  text-align: center;
+  background-color: var(--color_3);
+  justify-content: space-between;
+}
+header nav ul{
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+
+ 
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: var(--color_4);
+  font-size: 1.5rem;
+  font-weight: bold;
+  
+  /* letter-spacing: 0.2rem; */
+  transition: all 0.3s ease-in-out;
+}
+
+ header h1{
+
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  transition: all 0.3s ease-in-out;
+  color:var(--color_4) ;
+  text-shadow: 2px 2px 2px var(--color_1);
+  margin-left: 10px;
+
+}
+
+
+/* <!-- hero banner --> */
+.hero-banner{
+  width: 100%;
+  height: 220px;
+  background-image: url(../images/leaf.avif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+ background-attachment: fixed;
+ position: relative;
+ margin-bottom: 20px;
+}
+
+.hero-banner h2{
+position: absolute;
+ background-color: var(--color_1);
+ display: inline;
+right:5%;
+top:45%;
+padding: 20px;
+font-size: 2rem;
+}
+
+/* <!-- main section --> */
+.page-wrapper{
+  display: grid;
+  grid-template-columns:25% 75% ;
+  grid-template-rows:1fr 2fr 1fr ;
+
+  grid-template-areas:
+  "aboutme_1 aboutme_2"
+  "work_1 work_2"
+  "contact_1 contact_2";
+}
+.aboutme_1{
+  grid-area: aboutme_1;
+  border-right: 4px solid rgb(212, 197, 197);
+  margin: 20px;
+}
+.aboutme_1 h2{
+  padding-right:10px;
+  /* font-size: 3rem; */
+  font-weight: 900;
+  text-align: end;
+  font-size:clamp(3rem, 3vw, 5rem);
+
+}
+
+.aboutme_2{
+  grid-area: aboutme_2;
+  padding: 20px;
+  /* display: flex; */
+  /* flex-direction: column; */
+  margin: 20px;
+
+}
+.aboutme_2 p{
+  padding: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  /* text-align: justify; */
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+  float: left;
+  width: 70%;
+}
+#myimg{
+  width: 30%;
+  height: 200px;
+  border-radius: 10%;
+  float: left;
+}
+
+
+.work_1{
+  grid-area: work_1;
+
+  margin: 20px;
+  border-right: 4px solid rgb(212, 197, 197);
+}
+.work_1 h2{
+  padding-right:10px;
+  /* font-size: 3rem; */
+  font-weight: 900;
+  text-align: end;
+  font-size:clamp(3rem, 3vw, 5rem);
+
+}
+.work_2{
+  grid-area: work_2;
+  margin: 20px;
+
+}
+
+.work_2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+  "one one"
+  "two three"
+  "four five";
+
+}
+.one{
+  grid-area: one;
+  background-image: url(../images/white2.avif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+
+}
+.two{
+  grid-area: two;
+  background-image: url(../images/white3.avif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.three{
+  grid-area: three;
+  background-image: url(../images/white4.avif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.four{
+  grid-area: four;
+  background-image: url(../images/white5.avif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.five{
+  grid-area: five;
+  background-image: url(../images/white1.avif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.common{
+  border: 5px solid  #E5B80B;
+  margin: 4px;
+}
+
+h3,h4{
+  
+  padding: 10px;
+  font-weight: bold;
+  color: var(--color_4);
+  background-color: var(--color_3);
+  /* line-height: 1.5; */
+  transition: all 0.3s ease-in-out;
+  width: 20%;
+}
+
+
+.contact_1{
+  grid-area: contact_1;
+  margin: 20px;
+  border-right: 4px solid rgb(212, 197, 197);
+}
+
+.contact_1 h2{
+  padding-right:10px;
+  /* font-size: 3rem; */
+  font-weight: 900;
+  text-align: end;
+  font-size:clamp(3rem, 3vw, 5rem);
+
+}
+.contact_2{
+ padding-top: 80px;
+ 
+}
+.contact_2 ul{
+  grid-area: contact_2;
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+ 
+}
+.contact_2 .logo{
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  background-color: var(--color_1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color_4);
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  
+
+}
+/* mediaquery */
+@media screen and (max-width: 768px) {
+  header{
+    display: none;
+  }
+  .page-wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aboutme_1 h2{
+    padding-right:10px;
+    /* font-size: 3rem; */
+    font-weight: 900;
+    text-align: center;
+    font-size:clamp(3rem, 3vw, 5rem);
+  
+  }
+  
+  .aboutme_2{
+    
+    display: flex;
+    flex-direction: column;
+  
+  }
+  #myimg{
+    display: block;
+    margin: 20px auto;
+    width: 60%;
+    /* align-items: center;
+    justify-content: center; */
+  }
+  .aboutme_2 p{
+    padding: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: justify;
+    line-height: 1.5;
+    letter-spacing: 0.1rem;
+    width: 100%;
+  }
+  
+  
+  
+  .work_1 h2{
+    padding-right:10px;
+    /* font-size: 3rem; */
+    font-weight: 900;
+    text-align: center;
+    font-size:clamp(3rem, 3vw, 5rem);
+  
+  }
+  .work_2 .common{
+   width: 100%;
+   height: 200px;
+   margin: 10px;
+
+     
+  
+  }
+  
+  .work_2{
+    display: flex;
+    flex-direction: column;
+   
+  }
+  .one{
+    /* grid-area: one;
+    background-image: url(../images/white2.avif) */
+
+
+}
+.contact_1 h2{
+  padding-right:10px;
+  /* font-size: 3rem; */
+  font-weight: 900;
+  text-align: center;
+  font-size:clamp(3rem, 3vw, 5rem);
+
+}
+.contact_2 ul{
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+}
+.contact_2 .logo{
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+}
+}
